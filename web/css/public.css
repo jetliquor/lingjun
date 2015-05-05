@@ -1,0 +1,237 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #333;
+	background: #fff;
+	font-family: "微软雅黑", Tahoma, Verdana, Arial, sans-serif
+}
+
+body {
+	background: #fff
+}
+
+li {
+	list-style: none
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.warp {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.h_a {
+	background: url(/image/logo.jpg) no-repeat;
+	width: 186px;
+	height: 63px;
+	display: block;
+	margin-top: 38px;
+	float: left;
+}
+
+.warp .logo {
+	margin: 0;
+}
+
+.warp ul {
+	margin-bottom: 0;
+}
+
+.menu {
+	width: 701px;
+	background: url(/image/menuline.jpg) no-repeat;
+	border-right: solid 1px #eee;
+}
+
+.menu li {
+	float: left;
+	width: 140px;
+	height: 131px;
+	margin-top: 10px;
+	border-left: #eee 1px solid
+}
+
+.menu li a {
+	display: block;
+	padding-top: 47px;
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+}
+
+.menu li a span {
+	display: block;
+	color: #999;
+	font-size: 12px;
+	font-family: 'Arial';
+	padding-top: 3px;
+}
+
+.menu li a:hover {
+	text-decoration: none;
+	background: #42c076;
+	color: #fff
+}
+
+.menu li a:hover span {
+	color: #fff
+}
+
+.menu li a.on {
+	background: #42c076;
+	color: #fff
+}
+
+.menu li a.on span {
+	color: #fff
+}
+
+.menu li a b {
+	display: block;
+	margin: auto;
+	font-weight: normal;
+}
+
+.menu li a b.wb01 {
+	width: 33px
+}
+
+.menu li a b.wb02 {
+	width: 84px
+}
+
+.menu li a b.wb03 {
+	width: 66px
+}
+
+.menu li a b.wb04 {
+	width: 102px
+}
+
+.menu li a b.wb05 {
+	width: 64px
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+#gallery ol li {
+	width: 39px;
+	height: 5px;
+	margin-right: 16px;
+	background: #fff;
+	opacity: 0.7;
+}
+
+#gallery ol li.active {
+	background: #8AA92C;
+}
+
+.h-downBox {
+	width: 208px;
+	height: 330px;
+	position: absolute;
+	right: 10%;
+	bottom: 0;
+}
+
+.androidBtn,.appleBtn {
+	width: 81px;
+	height: 81px;
+	display: block;
+	float: left;
+	position: absolute;
+}
+
+.appleBtn {
+	left: 15px;
+	top: 25px;
+}
+
+.androidBtn {
+	right: 20px;
+	top: 25px;
+}
+
+.h-downBox a {
+	color: #333;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.h-center {
+	margin: 0 auto;
+	overflow: hidden;
+	background: url(/image/footbg.jpg) no-repeat center top;
+}
+
+.h-box {
+	margin-top: 150px;
+	overflow: hidden;
+}
+
+.h-box li {
+	float: left;
+	text-align: center;
+	list-style: none;
+}
+
+.h-zhuanye,.h-bianjie,.h-anquan {
+	background: url(/image/icons.png) no-repeat;
+	width: 137px;
+	height: 137px;
+	margin: 0 auto;
+}
+
+.h-zhuanye {
+	background-position: 0 -79px;
+}
+
+.h-bianjie {
+	background-position: -156px -79px;
+}
+
+.h-anquan {
+	background-position: -314px -79px;
+}
+
+.h-title {
+	font-size: 22px;
+	color: #181818;
+	margin-top: 25px;
+	margin-bottom: 18px;
+}
+
+.h-box p:nth-child(3),.h-box p:nth-child(4) {
+	color: #888888;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+
+footer {
+	text-align: center;
+	border-top: 2px solid #f07;
+	padding-top: 8px;
+}
