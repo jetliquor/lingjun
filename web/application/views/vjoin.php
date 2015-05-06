@@ -21,44 +21,21 @@
 <body>
 <header class="warp container">
     <h1 class="logo fl">
-        <a href="#" class="h_a"><span
+        <a href="/" class="h_a"><span
                 class="undis"></span></a>
     </h1>
     <ul class="menu fr">
-        <li><a id="nav-cleaning" href="#" class="on"><b class="wb01">首页<span>Home</span></b></a></li>
+        <li><a href="/home"><b class="wb01">首页<span>Home</span></b></a></li>
         <li><a href="/appoint"><b class="wb02">在线预约<span>Online
 							booking</span></b></a></li>
         <li><a href="/card"><b class="wb03">加入会员<span>Membership</span></b></a></li>
         <li><a href="/faq"><b class="wb04">常见问题<span>FAQ</span></b></a></li>
-        <li><a href="/join"><b class="wb05">加入我们<span>Join
+        <li><a href="#" class="on"><b class="wb05">加入我们<span>Join
 							us</span></b></a></li>
         <ul>
         </ul>
     </ul>
 </header>
-
-<div id="gallery">
-
-    <ul class="list">
-        <li class="item" style="background: url('/image/img1.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img2.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img3.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img4.jpg') no-repeat center"></li>
-    </ul>
-
-    <ol class="num">
-        <li class="on"></li>
-        <li class=""></li>
-        <li class=""></li>
-        <li class=""></li>
-    </ol>
-
-    <div class="h-downBox">
-        <img src="/image/download.png"> <a class="androidBtn"
-                                           href="https://itunes.apple.com/cn/app" target="_blank"></a> <a
-            class="appleBtn" href="/download/huanxinbao.apk" target="_blank"> </a>
-    </div>
-</div>
 
 <script src="/js/jquery-1.11.2.js"></script>
 <script src="/js/bootstrap.js"></script>
@@ -97,33 +74,6 @@
     </ul>
 </div>
 
-<div class="contact">
-    <div class="container">
-        <div class="mailbox">
-            <span>关于阿姨帮</span>
-
-            <p class="h-line"></p>
-
-            <p class="h-text">
-                公司介绍
-
-            <form id="mailto">
-                <input id="name_input" type="text" placeholder="姓名" name="name">
-                <input id="phone_input" class="mL10" type="text" placeholder="手机" name="phone">
-
-                <p>
-                    <textarea id="content_text" name="content" placeholder="您的支持是我们的动力，您的宝贵意见是我们的改进方向"></textarea>​
-                    <a href="javascript:void(0)" class="mail_submit"></a>
-                </p>
-            </form>
-        </div>
-        <div class="phone_address">
-            <p>021-8888-6666</p>
-
-            <p><a href="mailto:aabbcc@123.com" style="color:#ffffff">aabbcc@123.com</a></p>
-        </div>
-    </div>
-</div>
 </div>
 
 <footer class="container">
