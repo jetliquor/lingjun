@@ -20,6 +20,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('vhome');
+        //$this->load->view('test/vverifycode');
 	}
 }
 

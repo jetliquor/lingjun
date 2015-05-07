@@ -38,49 +38,18 @@
 </header>
 
 
-<div class="content container">
-    <div id="buy_card" style="background: url('/image/card_01.jpg') no-repeat center; width: 100%; height: 170px;">
-    </div>
+<div class="container">
+    <div>
+    <a href="/card">
+        <img id="buy_card" class="center-block" src="/image/card_01.jpg">
+        </img>
+    </a></div>
 </div>
 
 <script src="/js/jquery-1.11.2.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/ljcommon.js"></script>
 <script src="/js/ljmain.js"></script>
-
-<div class="h-center container">
-    <ul class="h-box row">
-        <li class="col-md-4">
-            <p class="h-zhuanye"></p>
-
-            <p class="h-title">专业</p>
-
-            <p>阿姨面试严格，10%择优录取；</p>
-
-            <p>系统培训、专业工具、标准化服务！</p>
-        </li>
-        <li class="col-md-4">
-            <p class="h-bianjie"></p>
-
-            <p class="h-title">便捷</p>
-
-            <p>随时随地，APP一键预约；智能匹配，</p>
-
-            <p>响应更快；在线支付，远离零钱！</p>
-        </li>
-        <li class="col-md-4">
-            <p class="h-anquan"></p>
-
-            <p class="h-title">安全</p>
-
-            <p>阿姨100%实名认证，岗前严格背景</p>
-
-            <p>调查，APP下单免费赠送家政险！</p>
-        </li>
-    </ul>
-</div>
-
-</div>
 
 <footer class="container">
     <p class="h_top">

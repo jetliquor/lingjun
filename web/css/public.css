@@ -32,13 +32,13 @@ a:hover {
     width: 960px;
     margin: 0 auto;
     position: relative;
-    margin: 0 auto;
+    padding: 0;
 }
 
 .h_a {
     background: url(/image/logo.jpg) no-repeat;
     width: 186px;
-    height: 63px;
+    height: 69px;
     display: block;
     margin-top: 38px;
     float: left;
@@ -323,8 +323,63 @@ a:hover {
 }
 
 footer {
-    //text-align: center;
+/ / text-align : center;
     border-top: 2px solid #f07;
     padding-top: 8px;
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* card page */
+.card-title {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    padding: 130px 0;
+}
+
+.card-title span {
+    font-size: 30px;
+}
+
+.content {
+    padding-top: 50px;
+    margin-left: 185px;
+    color: #333333;
+    line-height: 25px;
+}
+
+.card-content {
+    margin: 0 auto;
+    /* margin-top: 300px; */
+    width: 924px;
+    border: solid 1px #DADADA;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card-intro span {
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+.card-intro .join_card {
+    margin-top: 30px;
+    margin-left: 100px;
+    text-align: center;
+    width: 80px;padding: 5px;
+    color: white;
+    background-color: #3BC173;
+    cursor: hand;
+    cursor: pointer;
+}
+
+/* Faq */
+.content .line {
+    overflow: hidden;
+    height: 12px;
+    border-bottom: 1px dashed #d6d6d6;
+    margin-bottom: 12px;
 }
