@@ -21,6 +21,11 @@ class Appoint extends CI_Controller {
 	{
 		$this->load->view('vappoint');
 	}
+
+    public function detail($city, $id)
+    {
+        $this->load->view('vdetail');
+    }
 }
 
 /* End of file welcome.php */
