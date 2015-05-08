@@ -14,36 +14,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     -->
-    <link rel="stylesheet" href="/css/public.css"
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/appoint.css">
 
 </head>
 
 <body>
-<header class="warp container">
-    <h1 class="logo fl">
-        <a href="/" class="h_a"><span
+<header class="header container">
+    <div class="logo">
+        <a href="#" class="logo_img"><span
                 class="undis"></span></a>
-    </h1>
-    <ul class="menu fr">
-        <li><a href="/home"><b class="wb01">首页<span>Home</span></b></a></li>
-        <li><a href="#" class="on"><b class="wb02">在线预约<span>Online
-							booking</span></b></a></li>
-        <li><a href="/card"><b class="wb03">加入会员<span>Membership</span></b></a></li>
-        <li><a href="/faq"><b class="wb04">常见问题<span>FAQ</span></b></a></li>
-        <li><a href="/join"><b class="wb05">加入我们<span>Join
-							us</span></b></a></li>
+    </div>
+    <ul class="menu">
+        <li><a class="text-center" href="/home"><p>首页</p><b>Home</b></a></li>
+        <li><a class="on text-center" href="#"><p>在线预约</p><b>Online booking</b></a></li>
+        <li><a class="text-center" href="/card"><p>加入会员</p><b>Membership</b></a></li>
+        <li><a class="text-center" href="/faq"><p>常见问题</p><b>FAQ</b></a></li>
+        <li><a class="text-center" href="/join"><p>加入我们</p><b>Join us</b></a></li>
         <ul>
         </ul>
     </ul>
 </header>
 
-
 <div class="container">
     <div>
-    <a href="/card">
-        <img id="buy_card" class="center-block" src="/image/card_01.jpg">
-        </img>
-    </a></div>
+        <a href="/card">
+            <img id="buy_card" class="center-block" src="/image/card_01.jpg">
+            </img>
+        </a></div>
 </div>
 
 <script src="/js/jquery-1.11.2.js"></script>

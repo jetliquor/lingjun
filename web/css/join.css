@@ -1,0 +1,28 @@
+/* join */
+.content {
+    background: url(/image/joinus.jpg) no-repeat;
+    margin: 0 auto;
+    width: 1200px
+}
+
+.join_title {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.job_list {
+    margin: 150px 0 10px 0;
+    width: 1000px;
+    font-size: 14px;
+    border: solid 1px #DADADA;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+}
+
+.job_list .para {
+    line-height: 35px;
+    margin-bottom: 8px;
+}

@@ -14,24 +14,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     -->
-    <link rel="stylesheet" href="/css/public.css"
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
 
 </head>
 
 <body>
-<header class="warp container">
-    <h1 class="logo fl">
-        <a href="#" class="h_a"><span
-                class="undis"></span></a>
-    </h1>
-    <ul class="menu fr">
-        <li><a id="nav-cleaning" href="#" class="on"><b class="wb01">首页<span>Home</span></b></a></li>
-        <li><a href="/appoint"><b class="wb02">在线预约<span>Online
-							booking</span></b></a></li>
-        <li><a href="/card"><b class="wb03">加入会员<span>Membership</span></b></a></li>
-        <li><a href="/faq"><b class="wb04">常见问题<span>FAQ</span></b></a></li>
-        <li><a href="/join"><b class="wb05">加入我们<span>Join
-							us</span></b></a></li>
+<header class="header container">
+    <div class="logo">
+        <a href="#" class="logo_img"><img src="/image/logo.jpg"></a>
+    </div>
+    <ul class="menu">
+        <li><a class="on text-center" href="#"><p>首页</p><b>Home</b></a></li>
+        <li><a class="text-center" href="/appoint"><p>在线预约</p><b>Online booking</b></a></li>
+        <li><a class="text-center" href="/card"><p>加入会员</p><b>Membership</b></a></li>
+        <li><a class="text-center" href="/faq"><p>常见问题</p><b>FAQ</b></a></li>
+        <li><a class="text-center" href="/join"><p>加入我们</p><b>Join us</b></a></li>
         <ul>
         </ul>
     </ul>
@@ -40,10 +38,18 @@
 <div id="gallery">
 
     <ul class="list">
-        <li class="item" style="background: url('/image/img1.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img2.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img3.jpg') no-repeat center"></li>
-        <li class="item" style="background: url('/image/img4.jpg') no-repeat center"></li>
+        <li class="item">
+            <img src="/image/img1.jpg"/>
+        </li>
+        <li class="item">
+            <img src="/image/img2.jpg"/>
+        </li>
+        <li class="item">
+            <img src="/image/img3.jpg"/>
+        </li>
+        <li class="item">
+            <img src="/image/img4.jpg"/>
+        </li>
     </ul>
 
     <ol class="num">
@@ -53,7 +59,7 @@
         <li class=""></li>
     </ol>
 
-    <div class="h-downBox">
+    <div class="downBox">
         <img src="/image/download.png"> <a class="androidBtn"
                                            href="https://itunes.apple.com/cn/app" target="_blank"></a> <a
             class="appleBtn" href="/download/huanxinbao.apk" target="_blank"> </a>
@@ -65,30 +71,30 @@
 <script src="/js/ljcommon.js"></script>
 <script src="/js/ljmain.js"></script>
 
-<div class="h-center container">
-    <ul class="h-box row">
-        <li class="col-md-4">
-            <p class="h-zhuanye"></p>
+<div class="sell_point container">
+    <ul class="list_box row">
+        <li class="col-sm-4 col-md-4">
+            <p class="zhuanye"></p>
 
-            <p class="h-title">专业</p>
+            <p class="title">专业</p>
 
             <p>阿姨面试严格，10%择优录取；</p>
 
             <p>系统培训、专业工具、标准化服务！</p>
         </li>
-        <li class="col-md-4">
-            <p class="h-bianjie"></p>
+        <li class="col-sm-4 col-md-4">
+            <p class="bianjie"></p>
 
-            <p class="h-title">便捷</p>
+            <p class="title">便捷</p>
 
             <p>随时随地，APP一键预约；智能匹配，</p>
 
             <p>响应更快；在线支付，远离零钱！</p>
         </li>
-        <li class="col-md-4">
-            <p class="h-anquan"></p>
+        <li class="col-sm-4 col-md-4">
+            <p class="anquan"></p>
 
-            <p class="h-title">安全</p>
+            <p class="title">安全</p>
 
             <p>阿姨100%实名认证，岗前严格背景</p>
 
@@ -109,7 +115,7 @@
 
             <form id="mailto">
                 <input id="name_input" type="text" placeholder="姓名" name="name">
-                <input id="phone_input" class="mL10" type="text" placeholder="手机" name="phone">
+                <input id="phone_input" type="text" placeholder="手机" name="phone">
 
                 <p>
                     <textarea id="content_text" name="content" placeholder="您的支持是我们的动力，您的宝贵意见是我们的改进方向"></textarea>​
@@ -120,16 +126,18 @@
         <div class="phone_address">
             <p>021-8888-6666</p>
 
-            <p><a href="mailto:aabbcc@123.com" style="color:#ffffff">aabbcc@123.com</a></p>
+            <p><a href="mailto:aabbcc@123.com">aabbcc@123.com</a></p>
         </div>
     </div>
 </div>
 </div>
 
 <footer class="container">
-    <p class="h_top">
-        <a href="/service/media">媒体报道</a><span>|</span> <a href="/join">加入我们</a><span>|</span>
-        <a href="/faq">常见问题</a><span>|</span> <a href="/agreement">用户协议</a>
+    <p class="">
+        <a href="#">媒体报道</a><span>|</span>
+        <a href="/join">加入我们</a><span>|</span>
+        <a href="/faq">常见问题</a><span>|</span>
+        <a href="#">用户协议</a>
     </p>
 
     <p>©2015&nbsp;&nbsp;换芯宝

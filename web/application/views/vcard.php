@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>换芯宝 | 换芯卡</title>
+    <title>换芯宝</title>
     <link rel="shortcut icon" href="favicon.ico">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,24 +14,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     -->
-    <link rel="stylesheet" href="/css/public.css"
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/card.css">
 
 </head>
 
 <body>
-<header class="warp container">
-    <h1 class="logo fl">
-        <a href="/" class="h_a"><span
+<header class="header container">
+    <div class="logo">
+        <a href="#" class="logo_img"><span
                 class="undis"></span></a>
-    </h1>
-    <ul class="menu fr">
-        <li><a href="/home"><b class="wb01">首页<span>Home</span></b></a></li>
-        <li><a href="/appoint"><b class="wb02">在线预约<span>Online
-							booking</span></b></a></li>
-        <li><a href="#" class="on"><b class="wb03">加入会员<span>Membership</span></b></a></li>
-        <li><a href="/faq"><b class="wb04">常见问题<span>FAQ</span></b></a></li>
-        <li><a href="/join"><b class="wb05">加入我们<span>Join
-							us</span></b></a></li>
+    </div>
+    <ul class="menu">
+        <li><a class="text-center" href="/home"><p>首页</p><b>Home</b></a></li>
+        <li><a class="text-center" href="/appoint"><p>在线预约</p><b>Online booking</b></a></li>
+        <li><a class="on text-center" href="#"><p>加入会员</p><b>Membership</b></a></li>
+        <li><a class="text-center" href="/faq"><p>常见问题</p><b>FAQ</b></a></li>
+        <li><a class="text-center" href="/join"><p>加入我们</p><b>Join us</b></a></li>
         <ul>
         </ul>
     </ul>
@@ -42,14 +41,14 @@
 <script src="/js/ljcommon.js"></script>
 <script src="/js/ljmain.js"></script>
 
-<div style="background: url(/image/cardbackgroud.jpg) no-repeat center; height:600px; " class="center-block">
+<div class="content" class="center-block">
     <div>
-		<span class="card-title">
+		<span class="card_title">
 		家庭服务应有尽有，加入<span>会员</span>更享<span>实惠</span>
 		</span>
     </div>
-    <div class="card-content row">
-        <div class="card-intro col-md-4">
+    <div class="card_list container row">
+        <div class="card_intro col-sm-4 col-md-4">
             <span><img src="/image/card1.png"></span><br>
             <span>适合两周做一次保洁的用户</span><br>
             <span>充值1000</span><br>
@@ -57,7 +56,7 @@
             <span><span class="join_card" data-title="金卡会员" data-type="3"
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
-        <div class="card-intro col-md-4">
+        <div class="card_intro col-sm-4 col-md-4">
             <span><img src="/image/card2.png"></span><br>
             <span>适合每周做一次保洁的用户</span><br>
             <span>充值2000</span><br>
@@ -65,7 +64,7 @@
             <span><span class="join_card" data-title="白金会员" data-type="4"
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
-        <div class=" card-intro col-md-4">
+        <div class="card_intro col-sm-4 col-md-4">
             <span><img src="/image/card3.png"></span><br>
             <span>适合需要全方位家庭服务的用户</span><br>
             <span>充值5000</span><br>
@@ -76,20 +75,12 @@
     </div>
 </div>
 
-<div class=" container" style="margin-top:20px">
-    <div style="text-align:center; margin:60px 0;">
-		<span style="height:50px;display:inline-block;vertical-align: bottom;">
-            <img alt=""
-                 src="/image/telephoneicon.png"
-                 style="vertical-align: bottom;">
-		<span style="color:#18A252;font-size:28px;height:40px;display:inline-block;margin-top:10px;line-height:40px">
-            400-000-9898</span>
-		</span>
-
+<div class="membership container">
+    <div class="phone">
+        <img alt="" src="/image/telephoneicon.png" style="vertical-align: bottom;">
+        <span> 400-000-9898</span>
     </div>
-</div>
 
-<div class="container">
     <div class="row">
         <div class="col-md-3 text-center">
             <span><img src="/image/cardicon01.png"></span><br>
@@ -112,6 +103,9 @@
             <span class="color_green">更方便，更安全</span><br>
         </div>
     </div>
+</div>
+
+<div class="container">
     <div class="" style="margin-top:50px;">
     </div>
 </div>
@@ -139,12 +133,21 @@
             </div>
             <div class="modal-body">
                 <form id="apply_card">
-                    <input type="text" class="card_phone bottom-left" name="phone" placeholder="请输入手机号" style="width:255px;">
-                    <input type="text" class="card_vcode bottom-left" name="vcode" placeholder="请输入验证码" style="width:120px;">
+                    <input type="text" class="card_phone bottom-left" name="phone" placeholder="请输入手机号"
+                           style="width:255px;">
+                    <input type="text" class="card_vcode bottom-left" name="vcode" placeholder="请输入验证码"
+                           style="width:120px;">
                     <img id="vcode_img" style="vertical-align: middle;height:40px" src="/Utilities/CreateVerifyCode">
-                    <input type="text" class="card_code bottom-left" name="code" placeholder="请输入手机验证码" style="width:120px;">
-                    <input type="button" id="getcode" class="inline btn btn-default btn-lg" style="height:45px;width:135px;font-size: 14px;font-weight:bold;display:inline-block;" value="获取验证码">
-                    <div class="apply_card_button" style="color:white;font-size:20px;cursor: all-scroll;width: 100%;height: 50px;display: inline-block;background: #3BC173;text-align: center;vertical-align: middle;line-height: 50px;">立即申请</div>
+                    <input type="text" class="card_code bottom-left" name="code" placeholder="请输入手机验证码"
+                           style="width:120px;">
+                    <input type="button" id="getcode" class="inline btn btn-default btn-lg"
+                           style="height:45px;width:135px;font-size: 14px;font-weight:bold;display:inline-block;"
+                           value="获取验证码">
+
+                    <div class="apply_card_button"
+                         style="color:white;font-size:20px;cursor: all-scroll;width: 100%;height: 50px;display: inline-block;background: #3BC173;text-align: center;vertical-align: middle;line-height: 50px;">
+                        立即申请
+                    </div>
                     <input type="hidden" name="type">
                 </form>
             </div>

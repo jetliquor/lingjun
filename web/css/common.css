@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: #333;
+    background: #fff;
+    font-family: "微软雅黑", Tahoma, Verdana, Arial, sans-serif
+}
+
+body {
+    background: #fff
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 960px;
+    padding: 0px;
+}
+
+/* header */
+
+.header {
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .logo {
+}
+
+.header .logo .logo_img {
+    background: url(/image/logo.jpg) no-repeat;
+    width: 186px;
+    height: 69px;
+    display: block;
+    margin-top: 38px;
+    float: left;
+}
+
+.header .menu {
+    width: 701px;
+    background: url(/image/menuline.jpg) no-repeat;
+    border-right: solid 1px #eee;
+    float: right;
+    margin: 0;
+}
+
+.menu li {
+    float: left;
+    width: 140px;
+    height: 131px;
+    margin-top: 10px;
+    border-left: #eee 1px solid;
+    position: relative;
+}
+
+.menu li a {
+    font-size: 16px;
+    margin: auto;
+    padding-top: 40px;
+    height: 100%;
+    display: block;
+}
+
+.menu li a.on {
+    background: #5ac3e7;
+    color: #fff
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    background: #5ac3e7;
+    color: #fff
+}
+
+.menu li a p {
+    display: block;
+    margin: auto;
+    font-weight: normal;
+}
+
+.menu li a b {
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+    font-family: 'Arial';
+    padding-top: 3px;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    border-top: 2px solid #f07;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* component */
+.line {
+    overflow: hidden;
+    height: 12px;
+    border-bottom: 1px dashed #d6d6d6;
+    margin-bottom: 12px;
+}

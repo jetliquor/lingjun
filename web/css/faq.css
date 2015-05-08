@@ -1,0 +1,31 @@
+/* faq */
+
+.content {
+    background: url(/image/faq.jpg) no-repeat right top;
+    width: 1200px;
+    margin: 0 auto
+}
+
+.content .content_title {
+    display: inline-block;
+    text-align: left;
+    margin-left: 300px;
+    height: 10px;
+    width: 100%;
+    font-size: 24px;
+    padding: 130px 0;
+}
+
+.content .faq_list {
+    font-size: 14px;
+    padding: 30px;
+    text-align: left;
+    margin: 0 auto;
+    width: 924px;
+    border: solid 1px #DADADA;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.faq_title {
+    color: #3AC173;
+}
