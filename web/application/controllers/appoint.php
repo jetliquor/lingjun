@@ -7,13 +7,15 @@ class Appoint extends PrimeController
     public function Appoint()
     {
         parent::__construct();
+        $this->load->model('mproduct');
         $this->data['page_name'] = 'appoint';
     }
 
     public function index()
     {
-        $this->layout->view('vappoint', $this->data);
         array_push($this->data['csses'], '/css/appoint.css');
+        $this->data['products'] = $this->mproduct->getAll();
+        $this->layout->view('vappoint', $this->data);
     }
 
     public function detail($city, $id)

@@ -9,30 +9,42 @@
 <div class="prod_content">
     <div class="prod_list container">
         <div class="row">
-            <a class="col-sm-3 col-md-3" href="/appoint/detail/shanghai/0" target="_blank">
-                <div class="prod_item">
-                    <img src="http://img.ayibang.com/event/14220089691.jpg">
+            <?php
+            $count = 0;
+            foreach ($products as $product) {
+                echo <<<EOT
+                <div class="col-sm-3 col-md-3">
+ <a  href="/appoint/detail/$product->id" target="_blank">
+    <div class="prod_item" onmouseover="itemHover(this, 1)" onmouseout="itemHover(this, 0)">
+        <img src="$product->img">
 
-                    <h2>上门安装</h2>
+        <p>$product->name</p>
 
-                    <p>专业培训、标准化服务、品质保障，加入会员更享优惠</p>
-                    <b>￥200元/台</b>
-                    <input type="button" value="立即预约"
-                           onclick="location.href='/appoint/detail/shanghai/0'">
-                </div>
-            </a>
-            <a class="col-sm-3 col-md-3" href="/appoint/detail/shanghai/1" target="_blank">
-                <div class="prod_item">
-                    <img src="http://img.ayibang.com/event/14220085565.jpg">
-
-                    <h2>上门换芯</h2>
-
-                    <p>专业培训、标准化服务、品质保障，加入会员更享优惠</p>
-                    <b>￥100元/次</b>
-                    <input type="button" value="立即预约"
-                           onclick="location.href='/appoint/detail/shanghai/1'">
-                </div>
-            </a>
+        <p>$product->description</p>
+        <p>$product->price</p>
+        <input type="button" value="立即预约" style="display: none"
+               onclick="location.href='/appoint/detail/$product->id'">
+    </div>
+</a>
+</div>
+EOT;
+                $count++;
+            }
+            ?>
         </div>
     </div>
 </div>
+
+<script>
+
+    function itemHover(x, b) {
+        var box = $(x);
+        if (b) {
+            box.find('input').show();
+            box.css('border-color', '#398439');
+        } else {
+            box.find('input').hide();
+            box.css('border-color', '#fff');
+        }
+    }
+</script>

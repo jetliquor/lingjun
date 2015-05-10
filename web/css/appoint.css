@@ -10,12 +10,23 @@
     background: #AFE1EA;
 }
 
-.prod_list a {
-    display: inline;
-    background: #fff;
-    margin: 6px;
+.prod_list .row > div {
+    padding: 10px;
 }
 
 .prod_item {
-    padding: 10px;
+    background: #fff;
+    height: 300px;
+    border: 2px solid #fff;
+}
+
+.prod_item img {
+    width: 100%;
+}
+
+.prod_item a:hover {
+    text-decoration: blink;
+}
+.prod_item a:hover {
+    text-decoration: none;
 }
