@@ -4,6 +4,7 @@
 
 $(document).ready(function () {
     $('#gallery').showFocusImg();
+    $(".nav_box").slideGuide();
     $('#modal_join').on('show.bs.modal', function () {
         $(this).css({
             'display': 'block',

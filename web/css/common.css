@@ -119,3 +119,15 @@ footer {
     border-bottom: 1px dashed #d6d6d6;
     margin-bottom: 12px;
 }
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.px18 {
+    font-size: 18px;
+}.px14 {
+     font-size: 16px;
+ }

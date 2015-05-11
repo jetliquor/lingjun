@@ -18,6 +18,11 @@ class Product
         $this->price = $price;
     }
 
+    function __toString()
+    {
+        return $this->name. ' | '. $this->description;
+    }
+
     public $id;
     public $city;
     public $name;
@@ -34,7 +39,7 @@ class MProduct extends CI_Model
     {
         parent::__construct();
         $this->data = array(
-            new Product(0, 'shanghai', '上门安装', '专业培训、标准化服务、品质保障，加入会员更享优惠',  '/image/product001.jpg', '￥200元/台'),
+            new Product(0, 'shanghai', '上门安装', '专业培训、标准化服务、品质保障，加入会员更享优惠', '/image/product001.jpg', '￥200元/台'),
             new Product(1, 'shanghai', '上门换芯', '专业培训、标准化服务、品质保障，加入会员更享优惠', '/image/product002.jpg', '￥100元/台'),
             new Product(2, 'beijing', '上门换芯', '专业培训、标准化服务、品质保障，加入会员更享优惠', '/image/product002.jpg', '￥100元/台'),
             new Product(3, 'chongqing', '上门换芯', '专业培训、标准化服务、品质保障，加入会员更享优惠', '/image/product001.jpg', '￥80元/台'),
@@ -46,8 +51,30 @@ class MProduct extends CI_Model
         return $this->data;
     }
 
-    public function getProduct($city, $id = -1)
+    public function getProductById($product_id)
     {
+        $ret = null;
+        foreach ($this->data as $product) {
+            if ($product->id == $product_id) {
+                $ret = $product;
+                break;
+            }
+        }
+        return $ret;
+    }
 
+    public function getProductByCity($city, $size = 0)
+    {
+        $ret = array();
+        $count = 0;
+        foreach ($this->data as $product) {
+            if ($product[1] == $city) {
+                array_push($ret, $product);
+                if (++$count == $size) {
+                    break;
+                }
+            }
+        }
+        return $ret;
     }
 }

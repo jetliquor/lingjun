@@ -18,7 +18,7 @@
     <div class="prod_item" onmouseover="itemHover(this, 1)" onmouseout="itemHover(this, 0)">
         <img src="$product->img">
 
-        <p>$product->name</p>
+        <p style=" text-decoration: none;">$product->name</p>
 
         <p>$product->description</p>
         <p>$product->price</p>

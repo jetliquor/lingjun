@@ -18,9 +18,10 @@ class Appoint extends PrimeController
         $this->layout->view('vappoint', $this->data);
     }
 
-    public function detail($city, $id)
+    public function detail($product_id)
     {
         array_push($this->data['csses'], '/css/detail.css');
+        $this->data['product'] = $this->mproduct->getProductById($product_id);
         $this->layout->view('vdetail', $this->data);
     }
 }
