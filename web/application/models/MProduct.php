@@ -65,10 +65,12 @@ class MProduct extends CI_Model
 
     public function getProductByCity($city, $size = 0)
     {
+        $teaches = $this->db->get('test_teacher');
+        $lle = $teaches->result();
         $ret = array();
         $count = 0;
         foreach ($this->data as $product) {
-            if ($product[1] == $city) {
+            if ($product->city == $city) {
                 array_push($ret, $product);
                 if (++$count == $size) {
                     break;

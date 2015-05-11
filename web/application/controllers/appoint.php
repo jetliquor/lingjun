@@ -14,7 +14,7 @@ class Appoint extends PrimeController
     public function index()
     {
         array_push($this->data['csses'], '/css/appoint.css');
-        $this->data['products'] = $this->mproduct->getAll();
+        $this->data['products'] = $this->mproduct->getProductByCity('shanghai');
         $this->layout->view('vappoint', $this->data);
     }
 
