@@ -84,7 +84,7 @@
                            style="width:255px;">
                     <input type="text" class="card_vcode bottom-left" name="vcode" placeholder="请输入验证码"
                            style="width:120px;">
-                    <img id="vcode_img" style="vertical-align: middle;height:40px" src="/Utilities/CreateVerifyCode">
+                    <img id="vcode_img" onclick="onRefreshVcode()" style="vertical-align: middle;height:40px" src="/Utilities/CreateVerifyCode">
                     <input type="text" class="card_code bottom-left" name="code" placeholder="请输入手机验证码"
                            style="width:120px;">
                     <input type="button" id="getcode" class="inline btn btn-default btn-lg"
@@ -102,3 +102,9 @@
 
     </div>
 </div>
+
+<script>
+function onRefreshVcode() {
+    $('#vcode_img').attr('src', '/Utilities/CreateVerifyCode?a=Math.random()');
+}
+</script>

@@ -11,7 +11,12 @@
         <div class="row">
             <?php
             $count = 0;
+            $happyend = true;
             foreach ($products as $product) {
+                if ($count % 4 == 0) {
+                    echo '<div class="row">';
+                    $happyend = false;
+                }
                 echo <<<EOT
                 <div class="col-sm-3 col-md-3">
  <a  href="/appoint/detail/$product->id" target="_blank">
@@ -28,7 +33,15 @@
 </a>
 </div>
 EOT;
+
+                if ($count % 4 == 3) {
+                    echo '</div>';
+                    $happyend = true;
+                }
                 $count++;
+            }
+            if (!$happyend) {
+                echo '</div>';
             }
             ?>
         </div>
