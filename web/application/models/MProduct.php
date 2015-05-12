@@ -20,7 +20,7 @@ class Product
 
     function __toString()
     {
-        return $this->name. ' | '. $this->description;
+        return $this->name . ' | ' . $this->description;
     }
 
     public $id;
@@ -51,32 +51,62 @@ class MProduct extends CI_Model
         return $this->data;
     }
 
-    public function getProductById($product_id)
+    public function getGoodsById($goods_id)
     {
         $ret = null;
-        foreach ($this->data as $product) {
-            if ($product->id == $product_id) {
-                $ret = $product;
-                break;
-            }
+        $query = $this->db->get_where('goods', array('id'=>$goods_id))->result();
+        if (count($query) > 0) {
+            $this->db->select('
+            city.name_cn AS city,
+            category.id AS category,
+            product.name AS name, product.brief, product.img,
+            goods.id, goods.price, goods.price_pre, goods.price_post,
+            brand.name_cn AS brand');
+
+            $city_id = $query[0]->id;
+            $this->db->from('goods');
+            $this->db->where('goods.id = ' . $goods_id);
+            $this->db->join('product', 'product.id = goods.product_id');
+            $this->db->join('city', 'city.id = goods.city_id');
+            $this->db->join('brand', 'brand.id = product.brand_id');
+            $this->db->join('category', 'category.id = product.category_id');
+            $this->db->order_by('brand.id', 'asc');
+            $this->db->order_by('goods.price', 'asc');
+            $query = $this->db->get();
+            $ret = $query->result()[0];
         }
         return $ret;
     }
 
-    public function getProductByCity($city, $size = 0)
+    public function getGoodsByCity($city, $size = 0, $offset = 0)
     {
-        $teaches = $this->db->get('test_teacher');
-        $lle = $teaches->result();
-        $ret = array();
-        $count = 0;
-        foreach ($this->data as $product) {
-            if ($product->city == $city) {
-                array_push($ret, $product);
-                if (++$count == $size) {
-                    break;
-                }
+        $ret = null;
+        $city_query = $this->db->get_where('city', array('name_cn' => $city));
+        $query = $city_query->result();
+        if (count($query) > 0) {
+            $this->db->select('
+            city.name_cn AS city,
+            category.id AS category,
+            product.name AS name, product.brief, product.img,
+            goods.id, goods.price, goods.price_pre, goods.price_post,
+            brand.name_cn AS brand');
+
+            $city_id = $query[0]->id;
+            $this->db->from('goods');
+            $this->db->where('goods.city_id = ' . $city_id);
+            if ($size > 0 && $offset > 0) {
+                $this->db->limit($size, $offset);
             }
+            $this->db->join('product', 'product.id = goods.product_id');
+            $this->db->join('city', 'city.id = goods.city_id');
+            $this->db->join('brand', 'brand.id = product.brand_id');
+            $this->db->join('category', 'category.id = product.category_id');
+            $this->db->order_by('brand.id', 'asc');
+            $this->db->order_by('goods.price', 'asc');
+            $query = $this->db->get();
+            $ret = $query->result();
         }
+
         return $ret;
     }
 }

@@ -18,10 +18,10 @@
     <div class="prod_item" onmouseover="itemHover(this, 1)" onmouseout="itemHover(this, 0)">
         <img src="$product->img">
 
-        <p style=" text-decoration: none;">$product->name</p>
+        <h2>$product->name</h2>
 
-        <p>$product->description</p>
-        <p>$product->price</p>
+        <p>$product->brand</p>
+        <b> $product->price_pre $product->price $product->price_post</b>
         <input type="button" value="立即预约" style="display: none"
                onclick="location.href='/appoint/detail/$product->id'">
     </div>

@@ -10,6 +10,7 @@ abstract class PrimeController extends CI_Controller
 
         $this->data['jses'] = array(
             '/js/jquery-1.11.2.js',
+            '//code.jquery.com/ui/1.11.4/jquery-ui.js',
             '/js/bootstrap.js',
             '/js/ljcommon.js',
             '/js/ljmain.js');
@@ -19,6 +20,7 @@ abstract class PrimeController extends CI_Controller
             '/css/bootstrap-theme.css',
             //'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
             //'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css',
+            '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css',
             '/css/common.css');
     }
 }

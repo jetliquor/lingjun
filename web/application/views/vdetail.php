@@ -26,7 +26,7 @@
                 <h2 class="h_title">价格透明</h2>
 
                 <?php
-                echo $product;
+                echo $goods->category . '<br>' . $goods->name;
                 ?>
                 <h2 class="h_title">服务宣言</h2>
 
@@ -113,12 +113,14 @@
                     <div class="form-box">
                         <div class="formtit">服务时间</div>
                         <div class="iptbox">
-                	<span class="tips datetip">
-                    	<div>请选择服务日期！</div>
-                    </span>
-                    <span class="tips timetip">
-                    	<div>请选择服务时间！</div>
-                    </span>
+                            <!--
+                            <span class="tips datetip">
+                                <div>请选择服务日期！</div>
+                            </span>
+                            <span class="tips timetip">
+                                <div>请选择服务时间！</div>
+                            </span>
+                            -->
                             <input placeholder="日期" class="date hasDatepicker" name="serverdate" id="serverdate"
                                    tip="datetip">
                             <input placeholder="时间" class="time ui-timepicker-input" name="servertime" id="servertime"
@@ -144,14 +146,18 @@
                             <input class="iptl" name="remark" placeholder="您可以在这里备注更多需求">
                         </div>
                     </div>
-                    <div class="xieyi"><span class="checked"><input type="checkbox" id="xieyi" checked="checked"><label
-                                for="xieyi"> </label></span>
+
+                    <div class="xieyi">
+                        <span class="checked">
+                            <input type="checkbox" id="xieyi" class="checkbox">
+                            <label for="xieyi" class="checkbox_label"></label>
+                        </span>
                         <label for="xieyi">
                             我已阅读并同意《<a href="/agreement" target="_blank"> 阿姨帮用户使用协议 </a>》
                         </label>
                     </div>
                     <div><input type="button" class="submit px18" value="下一步" id="nextstep"></div>
-                    <div class="cover">
+                    <!--<div class="cover">
                         <div class="loginPoup">
                             <div class="topic">
                                 <span class="fl">验证手机号</span>
@@ -183,8 +189,10 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </form>
             </div>
         </div>
     </div>
 </div>
+

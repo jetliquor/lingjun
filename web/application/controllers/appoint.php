@@ -14,14 +14,14 @@ class Appoint extends PrimeController
     public function index()
     {
         array_push($this->data['csses'], '/css/appoint.css');
-        $this->data['products'] = $this->mproduct->getProductByCity('shanghai');
+        $this->data['products'] = $this->mproduct->getGoodsByCity('上海');
         $this->layout->view('vappoint', $this->data);
     }
 
-    public function detail($product_id)
+    public function detail($goods_id)
     {
         array_push($this->data['csses'], '/css/detail.css');
-        $this->data['product'] = $this->mproduct->getProductById($product_id);
+        $this->data['goods'] = $this->mproduct->getGoodsById($goods_id);
         $this->layout->view('vdetail', $this->data);
     }
 }
