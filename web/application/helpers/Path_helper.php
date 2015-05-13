@@ -11,20 +11,20 @@
 if (!function_exists('getImg')) {
     function getImg($img_name)
     {
-        return '/image/' . $img_name;
+        return '/51huanxin/image/' . $img_name;
     }
 }
 
 if (!function_exists('getCss')) {
     function getCss($css_name)
     {
-        return '/css/' . $css_name;
+        return '/51huanxin/css/' . $css_name;
     }
 }
 
 if (!function_exists('getJs')) {
     function getJs($js_name)
     {
-        return '/js/' . $js_name;
+        return '/51huanxin/js/' . $js_name;
     }
 }
