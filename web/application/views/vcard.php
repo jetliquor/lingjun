@@ -7,7 +7,7 @@
     </div>
     <div class="card_list container row">
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="/image/card1.png"></span><br>
+            <span><img src="<?=getImg('card1.png')?>"></span><br>
             <span>适合两周做一次保洁的用户</span><br>
             <span>充值1000</span><br>
             <span class="color_green">返现100</span><br>
@@ -15,7 +15,7 @@
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="/image/card2.png"></span><br>
+            <span><img src="<?=getImg('card2.png')?>"></span><br>
             <span>适合每周做一次保洁的用户</span><br>
             <span>充值2000</span><br>
             <span class="color_green">返现300</span><br>
@@ -23,7 +23,7 @@
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="/image/card3.png"></span><br>
+            <span><img src="<?=getImg('card3.png')?>"></span><br>
             <span>适合需要全方位家庭服务的用户</span><br>
             <span>充值5000</span><br>
             <span class="color_green">返现800</span><br>
@@ -35,28 +35,28 @@
 
 <div class="membership container">
     <div class="phone">
-        <img alt="" src="/image/telephoneicon.png" style="vertical-align: bottom;">
+        <img alt="" src="<?=getImg('telephoneicon.png')?>" style="vertical-align: bottom;">
         <span> 400-000-9898</span>
     </div>
 
     <div class="row">
         <div class="col-md-3 text-center">
-            <span><img src="/image/cardicon01.png"></span><br>
+            <span><img src="<?=getImg('cardicon01.png')?>"></span><br>
             <span class="intro-title">充值赠送</span><br>
             <span class="color_green">充的多返的多</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="/image/cardicon02.png"></span><br>
+            <span><img src="<?=getImg('cardicon02.png')?>"></span><br>
             <span class="intro-title">专属管家</span><br>
             <span class="color_green">一对一管家式服务</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="/image/cardicon03.png"></span><br>
+            <span><img src="<?=getImg('cardicon03.png')?>"></span><br>
             <span class="intro-title">一卡通用</span><br>
             <span class="color_green">一卡在手，家政无忧</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="/image/cardicon04.png"></span><br>
+            <span><img src="<?=getImg('cardicon04.png')?>"></span><br>
             <span class="intro-title">会员支付</span><br>
             <span class="color_green">更方便，更安全</span><br>
         </div>

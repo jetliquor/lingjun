@@ -1,7 +1,7 @@
 /* faq */
 
 .content {
-    background: url(/image/faq.jpg) no-repeat right top;
+    background: url(../image/faq.jpg) no-repeat right top;
     width: 1200px;
     margin: 0 auto
 }

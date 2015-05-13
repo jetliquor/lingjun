@@ -1,7 +1,7 @@
 <div class="container">
     <div>
         <a href="/card">
-            <img id="buy_card" class="center-block" src="/image/card_01.jpg">
+            <img id="buy_card" class="center-block" src="<?=getImg('card_01.jpg')?>">
             </img>
         </a></div>
 </div>

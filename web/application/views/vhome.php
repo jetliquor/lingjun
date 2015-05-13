@@ -2,16 +2,15 @@
 
     <ul class="list">
         <li class="item">
-            <img src="/image/img1.jpg"/>
+            <img src="<?=getImg('img1.jpg')?>"/>
         </li>
         <li class="item">
-            <img src="/image/img2.jpg"/>
         </li>
         <li class="item">
-            <img src="/image/img3.jpg"/>
+            <img src="<?=getImg('img3.jpg')?>"/>
         </li>
         <li class="item">
-            <img src="/image/img4.jpg"/>
+            <img src="<?=getImg('img4.jpg')?>"/>
         </li>
     </ul>
 
@@ -23,7 +22,7 @@
     </ol>
 
     <div class="downBox">
-        <img src="/image/download.png"> <a class="androidBtn"
+        <img src="<?=getImg('download.png')?>"> <a class="androidBtn"
                                            href="https://itunes.apple.com/cn/app" target="_blank"></a> <a
             class="appleBtn" href="/download/huanxinbao.apk" target="_blank"> </a>
     </div>

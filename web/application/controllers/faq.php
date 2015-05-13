@@ -7,7 +7,7 @@ class Faq extends PrimeController
     public function index()
     {
         $this->data['page_name'] = 'faq';
-        array_push($this->data['csses'], '/css/faq.css');
+        array_push($this->data['csses'], getCss('faq.css'));
         $this->layout->view('vfaq', $this->data);
     }
 }

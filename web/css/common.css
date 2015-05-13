@@ -44,7 +44,7 @@ li {
 }
 
 .header .logo .logo_img {
-    background: url(/image/logo.jpg) no-repeat;
+    background: url(../image/logo.jpg) no-repeat;
     width: 186px;
     height: 69px;
     display: block;
@@ -54,7 +54,7 @@ li {
 
 .header .menu {
     width: 701px;
-    background: url(/image/menuline.jpg) no-repeat;
+    background: url(../image/menuline.jpg) no-repeat;
     border-right: solid 1px #eee;
     float: right;
     margin: 0;

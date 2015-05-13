@@ -7,7 +7,7 @@ class Card extends PrimeController
     public function index()
     {
         $this->data['page_name'] = 'card';
-        array_push($this->data['csses'], '/css/card.css');
+        array_push($this->data['csses'], getCss('card.css'));
         $this->layout->view('vcard', $this->data);
     }
 }

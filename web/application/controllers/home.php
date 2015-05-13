@@ -7,7 +7,7 @@ class Home extends PrimeController
     public function index()
     {
         $this->data['page_name'] = 'home';
-        array_push($this->data['csses'], '/css/home.css');
+        array_push($this->data['csses'], getCss('home.css'));
         $this->layout->view('vhome', $this->data);
     }
 }

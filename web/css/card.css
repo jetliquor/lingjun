@@ -1,6 +1,6 @@
 /* card */
 .content {
-    background: url(/image/cardbackgroud.jpg) no-repeat center;
+    background: url(../image/cardbackgroud.jpg) no-repeat center;
     height: 600px;
 }
 

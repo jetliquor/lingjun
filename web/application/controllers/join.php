@@ -7,7 +7,7 @@ class Join extends PrimeController
     public function index()
     {
         $this->data['page_name'] = 'join';
-        array_push($this->data['csses'], '/css/join.css');
+        array_push($this->data['csses'], getCss('join.css'));
         $this->layout->view('vjoin', $this->data);
     }
 }

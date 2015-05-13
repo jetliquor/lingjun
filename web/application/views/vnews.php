@@ -1,5 +1,5 @@
 <div>
-    <img src="/image/mdbn.jpg">
+    <img src="<?=getImg('mdbn.jpg')?>">
     <div class="content">
 
     </div>

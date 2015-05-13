@@ -77,7 +77,7 @@
 .sell_point {
     margin: 0 auto;
     overflow: hidden;
-    background: url(/image/footbg.jpg) no-repeat center top;
+    background: url(../image/footbg.jpg) no-repeat center top;
 }
 
 .list_box {
@@ -92,7 +92,7 @@
 }
 
 .list_box .zhuanye, .list_box .bianjie, .list_box .anquan {
-    background: url(/image/icons.png) no-repeat;
+    background: url(../image/icons.png) no-repeat;
     width: 137px;
     height: 137px;
     margin: 0 auto;
@@ -124,7 +124,7 @@
 }
 
 .contact {
-    background: url("/image/bigbg.jpg") no-repeat center;
+    background: url("../image/bigbg.jpg") no-repeat center;
     min-width: 1200px;
     padding: 10px 30px 10px 30px;
     margin-bottom: 20px;
@@ -175,7 +175,7 @@
     width: 81px;
     height: 81px;
     display: inline-block;
-    background: url(/image/icons.png) 0 -236px no-repeat;
+    background: url(../image/icons.png) 0 -236px no-repeat;
     margin-top: -60px;
     margin-left: 27px;
 }

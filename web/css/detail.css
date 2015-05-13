@@ -229,13 +229,13 @@
 
 .form-box input.date {
     width: 152px;
-    background: url(/image/svcall.png) no-repeat -62px -108px;
+    background: url(../image/svcall.png) no-repeat -62px -108px;
     cursor: pointer;
 }
 
 .form-box input.time {
     width: 112px;
-    background: url(/image/svcall.png) no-repeat 70px -108px;
+    background: url(../image/svcall.png) no-repeat 70px -108px;
     margin-left: 4px;
     cursor: pointer;
 }
@@ -277,7 +277,7 @@
 }
 
 .checkbox_label {
-    background: url(/image/chkbox.png) no-repeat left center;
+    background: url(../image/chkbox.png) no-repeat left center;
     height: 100%;
     width: 100%;
     display: inline-block;

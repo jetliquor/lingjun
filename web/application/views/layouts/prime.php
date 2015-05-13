@@ -10,7 +10,7 @@
 
     <?php
     foreach ($csses as $css) {
-        echo '<link rel="stylesheet" href="' . $css . '">';
+        echo '<link rel="stylesheet" href="' . $css . '">' . PHP_EOL;
     }
     ?>
 </head>
@@ -18,7 +18,7 @@
 <body>
 <header class="header container">
     <div class="logo">
-        <a href="/" class="logo_img"><img src="/image/logo.jpg"></a>
+        <a href="/" class="logo_img"><img src="<?= getImg('logo.jpg') ?>"></a>
     </div>
     <ul class="menu">
         <?php
@@ -35,8 +35,9 @@
                 $on = '';
                 $link = '/' . $page[0];
             }
-            $li_line = sprintf('<li><a class="text-center %s" href="%s"><p>%s</p><b>%s</b></a></li>', $on, $link, $page[1], $page[2]);
-            echo $li_line;
+            echo <<<EOT
+<li><a class="text-center $on" href="$link"><p>$page[1]</p><b>$page[2]</b></a></li>
+EOT;
         }
         ?>
     </ul>
@@ -45,7 +46,7 @@
 <?php
 echo $content_for_layout;
 foreach ($jses as $js) {
-    echo '<script src="' . $js . '"></script>';
+    echo '<script src="' . $js . '"></script>' . PHP_EOL;
 }
 ?>
 
