@@ -1,0 +1,30 @@
+
+.process {
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.agr h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #33ac66;
+    margin: 59px 0 19px 0;
+}
+
+.agr .bd {
+    padding: 0 30px 16px 35px;
+    margin-bottom: 31px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #404040;
+    background: #fff;
+}
+
+.agr .bd p.pdno {
+    padding-left: 0;
+    padding: 30px 0;
+}
+
+.agr .bd h3 {
+    color: #33ac66;
+}

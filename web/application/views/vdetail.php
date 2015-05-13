@@ -153,7 +153,7 @@
                             <label for="xieyi" class="checkbox_label"></label>
                         </span>
                     <label for="xieyi">
-                        我已阅读并同意《<a href="/agreement" target="_blank"> 阿姨帮用户使用协议 </a>》
+                        我已阅读并同意《<a href="/misc/agreement" target="_blank"> 阿姨帮用户使用协议 </a>》
                     </label>
                 </div>
                 <div><input type="button" class="submit px18" value="下一步" id="nextstep"></div>

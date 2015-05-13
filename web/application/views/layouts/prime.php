@@ -51,10 +51,10 @@ foreach ($jses as $js) {
 
 <footer class="container">
     <p class="">
-        <a href="#">媒体报道</a><span>|</span>
+        <a href="/misc/news">媒体报道</a><span>|</span>
         <a href="/join">加入我们</a><span>|</span>
         <a href="/faq">常见问题</a><span>|</span>
-        <a href="#">用户协议</a>
+        <a href="/misc/agreement">用户协议</a>
     </p>
 
     <p>©2015&nbsp;&nbsp;换芯宝
