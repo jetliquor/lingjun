@@ -17,9 +17,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-$GLOBALS['debug'] = true;
 	define('ENVIRONMENT', 'development');
-echo "51huanxin00<br>";
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -57,7 +55,8 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = '51huanxin/system';
+$system_path = 'system';
+//$system_path = '51huanxin/system';
 
 /*
  *---------------------------------------------------------------
@@ -73,7 +72,8 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = '/var/www/51huanxin/application';
+	$application_folder = 'application';
+    //$application_folder = '/var/www/51huanxin/application';
 
 /*
  * --------------------------------------------------------------------
@@ -176,8 +176,6 @@ if (defined('ENVIRONMENT'))
 	// Name of the "system folder"
 	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
-echo "$system_path";
-echo "$application_folder";
 	// The path to the "application" folder
 	if (is_dir($application_folder))
 	{

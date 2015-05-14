@@ -1,16 +1,16 @@
 .content {
-    background: url(/image/bannerbg.jpg) no-repeat top;
+    background: url(../image/bannerbg.jpg) no-repeat top;
     padding-bottom: 60px;
 }
 
 .banner_title {
-    background: url("/image/banner_title.png") no-repeat center;
+    background: url("../image/banner_title.png") no-repeat center;
     width: 300px;
     height: 104px;
 }
 
 .banner_sign {
-    background: url("/image/svcall.png") no-repeat;
+    background: url("../image/svcall.png") no-repeat;
     height: 104px;
     width: 314px;
 }
@@ -56,7 +56,7 @@
 
 .nav_box .gotop {
     height: 40px;
-    background: url(/image/svcall.png) no-repeat -255px -108px;
+    background: url(../image/svcall.png) no-repeat -255px -108px;
     border: 1px solid #e8e8e8;
     margin-top: 10px;
     cursor: pointer;
@@ -160,19 +160,19 @@
 }
 
 .h_dl dt.h_ico1 {
-    background: url(/image/icons2.png) 0 -98px no-repeat;
+    background: url(../image/icons2.png) 0 -98px no-repeat;
 }
 
 .h_dl dt.h_ico2 {
-    background: url(/image/icons2.png) -91px -98px no-repeat;
+    background: url(../image/icons2.png) -91px -98px no-repeat;
 }
 
 .h_dl dt.h_ico3 {
-    background: url(/image/icons2.png) -181px -98px no-repeat;
+    background: url(../image/icons2.png) -181px -98px no-repeat;
 }
 
 .h_dl dt.h_ico4 {
-    background: url(/image/icons2.png) -273px -98px no-repeat;
+    background: url(../image/icons2.png) -273px -98px no-repeat;
 }
 
 .h_dlList {
@@ -187,7 +187,7 @@
     width: 53px;
     height: 25px;
     float: left;
-    background: url(/image/icons2.png) -339px -69px no-repeat;
+    background: url(../image/icons2.png) -339px -69px no-repeat;
     text-align: center;
     line-height: 25px;
     color: #fff;

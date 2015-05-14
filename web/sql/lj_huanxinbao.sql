@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS hxb_city (
   `id`      SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name_cn` VARCHAR(16)          NOT NULL DEFAULT ''
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 INSERT INTO hxb_city VALUES (0, '上海');
 INSERT INTO hxb_city VALUES (1, '北京');
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS hxb_brand (
   `id`      SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name_cn` VARCHAR(32)          NOT NULL DEFAULT '',
   `icon`    VARCHAR(256)         NOT NULL DEFAULT ''
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 INSERT INTO hxb_brand VALUES (0, '爱惠浦', '');
 INSERT INTO hxb_brand VALUES (1, '滨特尔', '');
@@ -24,7 +24,7 @@ INSERT INTO hxb_brand VALUES (5, '3M', '');
 CREATE TABLE IF NOT EXISTS hxb_category (
   `id`      SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name_cn` VARCHAR(16)          NOT NULL DEFAULT ''
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 INSERT INTO hxb_category VALUES (0, '滤芯');
 INSERT INTO hxb_category VALUES (1, '净水器');
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS hxb_product (
   PRIMARY KEY (`category_id`, `brand_id`, `name`),
   FOREIGN KEY (`category_id`) REFERENCES hxb_category (id),
   FOREIGN KEY (`brand_id`) REFERENCES hxb_brand (id)
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 INSERT INTO hxb_product VALUES (0, 0, 0, '【特价】爱惠浦（Everpure） PP棉滤芯',	'爱惠浦', '/image/product001.jpg');
 INSERT INTO hxb_product VALUES (1, 0, 1, '【特价】滨特尔（pentair）PP棉滤芯',	'滨特尔', '/image/product001.jpg');
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS hxb_goods (
   PRIMARY KEY (`product_id`, `city_id`),
   FOREIGN KEY (`product_id`) REFERENCES hxb_product (id),
   FOREIGN KEY (`city_id`) REFERENCES hxb_city (id)
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 INSERT INTO hxb_goods VALUES (0,  0, 0,  80   , '￥', '台');
 INSERT INTO hxb_goods VALUES (1,  0, 1,  80   , '￥', '台');

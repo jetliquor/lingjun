@@ -8,23 +8,26 @@
 
 //namespace jli\helper\path;
 
+//const ASSET_PATH = '/51huanxin';
+const ASSET_PATH = '';
+
 if (!function_exists('getImg')) {
     function getImg($img_name)
     {
-        return '/51huanxin/image/' . $img_name;
+        return ASSET_PATH.'/image/' . $img_name;
     }
 }
 
 if (!function_exists('getCss')) {
     function getCss($css_name)
     {
-        return '/51huanxin/css/' . $css_name;
+        return ASSET_PATH.'/css/' . $css_name;
     }
 }
 
 if (!function_exists('getJs')) {
     function getJs($js_name)
     {
-        return '/51huanxin/js/' . $js_name;
+        return ASSET_PATH.'/js/' . $js_name;
     }
 }

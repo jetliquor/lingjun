@@ -32,15 +32,15 @@
 
                 <div class="item_box">
                     <dl class="service">
-                        <dt><img src="/image/appPic1.jpg"></dt>
+                        <dt><img src="<?=getImg('appPic1.jpg')?>"></dt>
                         <dd><p>生活中总有做不完的家务事，疲惫不堪的您是否做梦都想，动动手指即可坐拥洁净与舒适？阿姨帮正致力于达成您的心愿！</p></dd>
                     </dl>
                     <dl class="service2">
-                        <dt><img src="/image/appPic2.jpg"></dt>
+                        <dt><img src="<?=getImg('appPic2.jpg')?>"></dt>
                         <dd><p>我们专注移动互联技术研发，通过一系列服务标准化建设，让您用最优的价格，享受最高品质的服务。</p></dd>
                     </dl>
                     <dl class="service">
-                        <dt><img src="/image/appPic3.jpg"></dt>
+                        <dt><img src="<?=getImg('appPic3.jpg')?>></dt>
                         <dd><p>阿姨帮将为每一位用户提供至尊的服务体验。无论您是我们的会员，还是初次使用的用户，在这里都将尽享非凡的礼遇！</p></dd>
                     </dl>
                     <p class="h_infor">”感谢您的支持，感谢您的使用，我们一直在努力！“</p>
@@ -48,7 +48,7 @@
 
                 <h2 class="h_title">专业技师上门</h2>
 
-                <div class="item_box"><img src="/image/appPic4.jpg"></div>
+                <div class="item_box"><img src="<?=getImg('appPic4.jpg')?>"></div>
 
                 <h2 class="h_title">用户保障</h2>
 
