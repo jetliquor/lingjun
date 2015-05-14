@@ -24,7 +24,7 @@
         <?php
         $pages = array(array('home', '首页', 'Home'),
             array('appoint', '在线预约', 'Online booking'),
-            array('card', '加入会员', 'Membership'),
+            array('card', '换芯卡', 'Membership'),
             array('faq', '常见问题', 'FAQ'),
             array('join', '加入我们', 'Join us'));
         foreach ($pages as $page) {

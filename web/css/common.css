@@ -91,17 +91,25 @@ li {
 .menu li a p {
     display: block;
     margin: auto;
-    font-weight: normal;
+    font-weight: bold;
+    color: #333;
 }
 
 .menu li a b {
     display: block;
-    color: #ccc;
+    color: #999;
     font-size: 12px;
     font-family: 'Arial';
     padding-top: 3px;
+    font-weight: normal;
 }
 
+.menu li a.on p,
+.menu li a:hover p,
+.menu li a.on b,
+.menu li a:hover b {
+    color: #fff;
+}
 
 /* footer */
 footer {
@@ -127,11 +135,15 @@ footer p {
 .fl {
     float: left;
 }
+
 .fr {
     float: right;
 }
+
 .px18 {
     font-size: 18px;
-}.px14 {
-     font-size: 16px;
- }
+}
+
+.px14 {
+    font-size: 16px;
+}

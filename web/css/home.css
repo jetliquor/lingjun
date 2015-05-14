@@ -17,6 +17,22 @@
     height: 720px;
 }
 
+#gallery .list .item:nth-child(1) {
+    background: url(../image/img1.jpg) no-repeat center;
+}
+
+#gallery .list .item:nth-child(2) {
+    background: url(../image/img2.jpg) no-repeat center;
+}
+
+#gallery .list .item:nth-child(3) {
+    background: url(../image/img3.jpg) no-repeat center;
+}
+
+#gallery .list .item:nth-child(4) {
+    background: url(../image/img4.jpg) no-repeat center;
+}
+
 #gallery .num {
     width: 222px;
     height: 5px;

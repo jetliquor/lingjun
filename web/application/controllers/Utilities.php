@@ -36,9 +36,10 @@ class Utilities extends CI_Controller
         }
     }
 
-    public function SendSecurityCode($phone, $code, $zone)
+    public function SendSecurityCode()
     {
         $this->load->helper('SecurityCode');
-        return SendSecurityCode($phone, $code, $zone, 10);
+        // todo check $_POST['vcode']
+        send_security_code('18983213533', '1234', '86', 10);
     }
 }

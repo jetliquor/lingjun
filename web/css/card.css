@@ -55,3 +55,11 @@
     margin-top: 10px;
     line-height: 40px
 }
+
+#modal_join #getcode {
+    height: 45px;
+    width: 135px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}

@@ -87,8 +87,7 @@
                     <img id="vcode_img" onclick="onRefreshVcode()" style="vertical-align: middle;height:40px" src="/Utilities/CreateVerifyCode">
                     <input type="text" class="card_code bottom-left" name="code" placeholder="请输入手机验证码"
                            style="width:120px;">
-                    <input type="button" id="getcode" class="inline btn btn-default btn-lg"
-                           style="height:45px;width:135px;font-size: 14px;font-weight:bold;display:inline-block;"
+                    <input type="button" id="getcode" onclick="onGetSecurityVcode()" class="inline btn btn-default btn-lg"
                            value="获取验证码">
 
                     <div class="apply_card_button"
@@ -106,5 +105,51 @@
 <script>
 function onRefreshVcode() {
     $('#vcode_img').attr('src', '/Utilities/CreateVerifyCode?a=Math.random()');
+}
+var second = 10;
+function onGetSecurityVcode() {
+    var phone = $('.card_phone').val();
+    var vcode = $(".card_vcode").val();
+    if(!phone){
+        alert('请输入正确的手机号');
+        return false;
+    }
+    if(!vcode){
+        alert('请输入正确的验证码');
+        return false;
+    }
+//	$('#getcode').attr('disabled', 'disabled');
+    refreshIntervalId = window.setInterval("count_down();", 1000);
+    $.ajax({
+        type: "POST",
+        url: "/Utilities/SendSecurityCode",
+        data: 'phone='+phone + '&vcode='+vcode,
+        success: function(data){
+            if(data.error > 0){
+                alert(data.msg);
+            } else {
+                // 倒计时
+                refreshIntervalId = window.setInterval("count_down();", 1000);
+                // $('#token').val(data.token);
+            }
+        },
+        error: function(data){
+
+        }
+    });
+}
+
+function count_down(){
+    if(second > 0){
+        $('#getcode').attr('disabled', 'disabled');
+        $('#getcode').val(second + '秒');
+        second--;
+    } else {
+        second = 10;
+        $('#getcode').val('获取验证码');
+        $('#getcode').removeAttr('disabled');
+        //       $('.warmprompt').removeClass('hide');
+        clearInterval(refreshIntervalId);
+    }
 }
 </script>

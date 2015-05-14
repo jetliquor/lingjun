@@ -2,16 +2,12 @@
 
     <ul class="list">
         <li class="item">
-            <img src="<?=getImg('img1.jpg')?>"/>
         </li>
         <li class="item">
-            <img src="<?=getImg('img2.jpg')?>"/>
         </li>
         <li class="item">
-            <img src="<?=getImg('img3.jpg')?>"/>
         </li>
         <li class="item">
-            <img src="<?=getImg('img4.jpg')?>"/>
         </li>
     </ul>
 
