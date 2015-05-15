@@ -10,4 +10,14 @@ class Card extends PrimeController
         array_push($this->data['csses'], getCss('card.css'));
         $this->layout->view('vcard', $this->data);
     }
+
+    public function apply($phone, $scode, $type)
+    {
+        session_start();
+        if (strtoupper($scode) == strtoupper($_SESSION["SecurityCode"])) {
+            // OK for apply
+
+            // feedback nothing
+        }
+    }
 }

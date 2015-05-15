@@ -1,4 +1,3 @@
-
 <div class="content" class="center-block">
     <div>
 		<span class="card_title">
@@ -7,7 +6,7 @@
     </div>
     <div class="card_list container row">
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="<?=getImg('card1.png')?>"></span><br>
+            <span><img src="<?= getImg('card1.png') ?>"></span><br>
             <span>适合两周做一次保洁的用户</span><br>
             <span>充值1000</span><br>
             <span class="color_green">返现100</span><br>
@@ -15,7 +14,7 @@
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="<?=getImg('card2.png')?>"></span><br>
+            <span><img src="<?= getImg('card2.png') ?>"></span><br>
             <span>适合每周做一次保洁的用户</span><br>
             <span>充值2000</span><br>
             <span class="color_green">返现300</span><br>
@@ -23,7 +22,7 @@
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
-            <span><img src="<?=getImg('card3.png')?>"></span><br>
+            <span><img src="<?= getImg('card3.png') ?>"></span><br>
             <span>适合需要全方位家庭服务的用户</span><br>
             <span>充值5000</span><br>
             <span class="color_green">返现800</span><br>
@@ -35,28 +34,28 @@
 
 <div class="membership container">
     <div class="phone">
-        <img alt="" src="<?=getImg('telephoneicon.png')?>" style="vertical-align: bottom;">
+        <img alt="" src="<?= getImg('telephoneicon.png') ?>" style="vertical-align: bottom;">
         <span> 400-000-9898</span>
     </div>
 
     <div class="row">
         <div class="col-md-3 text-center">
-            <span><img src="<?=getImg('cardicon01.png')?>"></span><br>
+            <span><img src="<?= getImg('cardicon01.png') ?>"></span><br>
             <span class="intro-title">充值赠送</span><br>
             <span class="color_green">充的多返的多</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="<?=getImg('cardicon02.png')?>"></span><br>
+            <span><img src="<?= getImg('cardicon02.png') ?>"></span><br>
             <span class="intro-title">专属管家</span><br>
             <span class="color_green">一对一管家式服务</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="<?=getImg('cardicon03.png')?>"></span><br>
+            <span><img src="<?= getImg('cardicon03.png') ?>"></span><br>
             <span class="intro-title">一卡通用</span><br>
             <span class="color_green">一卡在手，家政无忧</span><br>
         </div>
         <div class="col-md-3 text-center">
-            <span><img src="<?=getImg('cardicon04.png')?>"></span><br>
+            <span><img src="<?= getImg('cardicon04.png') ?>"></span><br>
             <span class="intro-title">会员支付</span><br>
             <span class="color_green">更方便，更安全</span><br>
         </div>
@@ -84,72 +83,108 @@
                            style="width:255px;">
                     <input type="text" class="card_vcode bottom-left" name="vcode" placeholder="请输入验证码"
                            style="width:120px;">
-                    <img id="vcode_img" onclick="onRefreshVcode()" style="vertical-align: middle;height:40px" src="/Utilities/CreateVerifyCode">
+                    <img id="vcode_img" onclick="onRefreshVcode()" style="vertical-align: middle;height:40px"
+                         src="/Utilities/CreateVerifyCode">
                     <input type="text" class="card_code bottom-left" name="code" placeholder="请输入手机验证码"
                            style="width:120px;">
-                    <input type="button" id="getcode" onclick="onGetSecurityVcode()" class="inline btn btn-default btn-lg"
+                    <input type="button" id="getcode" onclick="onGetSecurityVcode()"
+                           class="inline btn btn-default btn-lg"
                            value="获取验证码">
 
-                    <div class="apply_card_button"
-                         style="color:white;font-size:20px;cursor: all-scroll;width: 100%;height: 50px;display: inline-block;background: #3BC173;text-align: center;vertical-align: middle;line-height: 50px;">
-                        立即申请
-                    </div>
+                    <div class="apply_card_button" onclick="onApplyCard()">立即申请</div>
                     <input type="hidden" name="type">
                 </form>
-            </div>
         </div>
-
     </div>
+
+</div>
 </div>
 
 <script>
-function onRefreshVcode() {
-    $('#vcode_img').attr('src', '/Utilities/CreateVerifyCode?a=Math.random()');
-}
-var second = 10;
-function onGetSecurityVcode() {
-    var phone = $('.card_phone').val();
-    var vcode = $(".card_vcode").val();
-    if(!phone){
-        alert('请输入正确的手机号');
-        return false;
+    function onRefreshVcode() {
+        $('#vcode_img').attr('src', '/Utilities/CreateVerifyCode?a=Math.random()');
     }
-    if(!vcode){
-        alert('请输入正确的验证码');
-        return false;
-    }
-//	$('#getcode').attr('disabled', 'disabled');
-    refreshIntervalId = window.setInterval("count_down();", 1000);
-    $.ajax({
-        type: "POST",
-        url: "/Utilities/SendSecurityCode",
-        data: 'phone='+phone + '&vcode='+vcode,
-        success: function(data){
-            if(data.error > 0){
-                alert(data.msg);
-            } else {
-                // 倒计时
-                refreshIntervalId = window.setInterval("count_down();", 1000);
-                // $('#token').val(data.token);
-            }
-        },
-        error: function(data){
 
+    function onGetSecurityVcode() {
+        var phone = $('.card_phone').val();
+        var vcode = $(".card_vcode").val();
+        if (!phone || phone.length != 11) {
+            alert('请输入正确的手机号');
+            return false;
         }
-    });
-}
+        if (!vcode || vcode.length != 4) {
+            alert('请输入正确的验证码');
+            return false;
+        }
+//	$('#getcode').attr('disabled', 'disabled');
+        refreshIntervalId = window.setInterval("count_down();", 1000);
+        $.ajax({
+            type: "GET",
+            url: "/Utilities/SendSecurityCode/" + phone + "/" + vcode,
+            success: function (resp) {
+                if (resp.length > 0) {
+                    alert(resp);
+                } else {
+                    // 倒计时
+                    refreshIntervalId = window.setInterval("count_down();", 1000);
+                    // $('#token').val(data.token);
+                }
+            },
+            error: function (resp) {
 
-function count_down(){
-    if(second > 0){
-        $('#getcode').attr('disabled', 'disabled');
-        $('#getcode').val(second + '秒');
-        second--;
-    } else {
-        second = 10;
-        $('#getcode').val('获取验证码');
-        $('#getcode').removeAttr('disabled');
-        //       $('.warmprompt').removeClass('hide');
-        clearInterval(refreshIntervalId);
+            }
+        });
     }
-}
+
+    function onApplyCard() {
+        var phone = $('.card_phone').val();
+        var vcode = $(".card_vcode").val();
+        var card_code = $(".card_code").val();
+//	console.log($("#apply_card").serialize());
+//	console.log(phone, vcode);
+        if (!phone || phone.length != 11) {
+            alert('请输入正确的手机号');
+            return false;
+        }
+        if (!vcode || vcode.length != 4) {
+            alert('请输入正确的验证码');
+            return false;
+        }
+        if (!card_code || card_code.length != 4) {
+            alert('请输入正确的手机验证码');
+            return false;
+        }
+        $('#getcode').attr('disabled', 'disabled');
+        $.ajax({
+            type: "GET",
+            url: "/card/apply/"+phone+"/"+card_code+"/0", // TODO, type
+            success: function (resp) {
+                if (resp.length > 0) {
+                    alert(resp);
+                } else {
+                    clearInterval(refreshIntervalId);
+                    // 成功对话框TODO
+                    $('.ui-dialog-content').html($('#apply_success').html());
+                }
+            },
+            error: function () {
+
+            }
+        });
+    }
+
+    var second = 10;
+    function count_down() {
+        if (second > 0) {
+            $('#getcode').attr('disabled', 'disabled');
+            $('#getcode').val(second + '秒');
+            second--;
+        } else {
+            second = 10;
+            $('#getcode').val('获取验证码');
+            $('#getcode').removeAttr('disabled');
+            //       $('.warmprompt').removeClass('hide');
+            clearInterval(refreshIntervalId);
+        }
+    }
 </script>

@@ -25,21 +25,17 @@ class Utilities extends CI_Controller
         imagedestroy($checkCode['image']); //释放资源
     }
 
-    public function CheckVerifyCode()
+    public function SendSecurityCode($phone, $vcode)
     {
         session_start();
-        @$postcode = $_GET['code'];
-        if ((strtoupper($postcode)) == strtoupper(($_SESSION["VerifyCode"]))) {
-            echo '{"verifycode":"Y"}';
+        if (strtoupper($vcode) == strtoupper($_SESSION["VerifyCode"])) {
+            $this->load->helper('SecurityCode');
+            $num = rand(10, 9100);
+            $vcode = sprintf("%04d", $num);
+            $_SESSION["SecurityCode"] = $vcode;
+            send_security_code($phone, array('code' => $vcode, 'expires' => '5'));
         } else {
-            echo '{"verifycode":"N"}';
+            echo "验证码错误！";
         }
-    }
-
-    public function SendSecurityCode()
-    {
-        $this->load->helper('SecurityCode');
-        // todo check $_POST['vcode']
-        send_security_code('18983213533', '1234', '86', 10);
     }
 }
