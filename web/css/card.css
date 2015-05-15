@@ -37,7 +37,7 @@
     width: 80px;
     padding: 5px;
     color: white;
-    background-color: #3BC173;
+    background-color: #5ac3e7;
     cursor: hand;
     cursor: pointer;
 }
@@ -48,7 +48,7 @@
 }
 
 .membership .phone span {
-    color: #18A252;
+    color: #5ac3e7;
     font-size: 28px;
     height: 40px;
     display: inline-block;
