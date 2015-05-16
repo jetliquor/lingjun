@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'jli';
+$db['default']['password'] = '';
 $db['default']['database'] = 'lj_huanxinbao';
 //$db['default']['hostname'] = 'mysql.sql83.cdncenter.net';
 //$db['default']['username'] = 'sq_ljhadminn';

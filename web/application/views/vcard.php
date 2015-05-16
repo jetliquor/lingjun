@@ -1,4 +1,11 @@
 <div class="content" class="center-block">
+    <div class="login">
+        <img/>
+
+        <div style="text-align: center;width: 100%;font-size: 30px">
+            <a data-toggle="modal" data-target="#modal_login">登录</a></div>
+    </div>
+
     <div>
 		<span class="card_title">
 		家庭服务应有尽有，加入<span>会员</span>更享<span>实惠</span>
@@ -10,7 +17,7 @@
             <span>适合两周做一次保洁的用户</span><br>
             <span>充值1000</span><br>
             <span class="color_green">返现100</span><br>
-            <span><span class="join_card" data-title="金卡会员" data-type="3"
+            <span><span class="join_card" data-title="加入金卡会员" data-type="1"
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
@@ -18,7 +25,7 @@
             <span>适合每周做一次保洁的用户</span><br>
             <span>充值2000</span><br>
             <span class="color_green">返现300</span><br>
-            <span><span class="join_card" data-title="白金会员" data-type="4"
+            <span><span class="join_card" data-title="加入白金会员" data-type="2"
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
         <div class="card_intro col-sm-4 col-md-4">
@@ -26,7 +33,7 @@
             <span>适合需要全方位家庭服务的用户</span><br>
             <span>充值5000</span><br>
             <span class="color_green">返现800</span><br>
-            <span><span class="join_card" data-title="钻石会员" data-type="5"
+            <span><span class="join_card" data-title="加入钻石会员" data-type="3"
                         data-toggle="modal" data-target="#modal_join">立即加入</span></span>
         </div>
     </div>
@@ -68,6 +75,35 @@
 </div>
 
 <!-- Modal -->
+<div id="modal_login" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width: 320px">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">换新卡登录</h4>
+            </div>
+            <div class="modal-body">
+                <form id="login">
+                    <div class="input_group">
+                        <span>用户名</span><b> : &nbsp</b>
+                        <input type="text" name="user" placeholder="请输入用戶名">
+                    </div>
+                    <div class="input_group">
+                        <span>卡密</span><b> : &nbsp</b>
+                        <input type="password" name="password" placeholder="请输入卡密">
+                    </div>
+                    <div class="login_button" onclick="onCardLogin()">登录</div>
+                    <input type="hidden" name="type">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
 <div id="modal_join" class="modal fade" role="dialog">
     <div class="modal-dialog" style="width: 320px">
 
@@ -75,13 +111,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">加入会员</h4>
+                <h4 class="modal-title">加入</h4>
             </div>
             <div class="modal-body">
                 <form id="apply_card">
-                    <input type="text" class="card_phone bottom-left" name="phone" placeholder="请输入手机号"
+                    <input type="text" class="card_phone " name="phone" placeholder="请输入手机号"
                            style="width:255px;">
-                    <input type="text" class="card_vcode bottom-left" name="vcode" placeholder="请输入验证码"
+                    <input type="text" class="card_vcode " name="vcode" placeholder="请输入验证码"
                            style="width:120px;">
                     <img id="vcode_img" onclick="onRefreshVcode()" style="vertical-align: middle;height:40px"
                          src="/Utilities/CreateVerifyCode">
@@ -94,97 +130,10 @@
                     <div class="apply_card_button" onclick="onApplyCard()">立即申请</div>
                     <input type="hidden" name="type">
                 </form>
+            </div>
         </div>
+
     </div>
-
-</div>
 </div>
 
-<script>
-    function onRefreshVcode() {
-        $('#vcode_img').attr('src', '/Utilities/CreateVerifyCode?a=Math.random()');
-    }
-
-    function onGetSecurityVcode() {
-        var phone = $('.card_phone').val();
-        var vcode = $(".card_vcode").val();
-        if (!phone || phone.length != 11) {
-            alert('请输入正确的手机号');
-            return false;
-        }
-        if (!vcode || vcode.length != 4) {
-            alert('请输入正确的验证码');
-            return false;
-        }
-//	$('#getcode').attr('disabled', 'disabled');
-        refreshIntervalId = window.setInterval("count_down();", 1000);
-        $.ajax({
-            type: "GET",
-            url: "/Utilities/SendSecurityCode/" + phone + "/" + vcode,
-            success: function (resp) {
-                if (resp.length > 0) {
-                    alert(resp);
-                } else {
-                    // 倒计时
-                    refreshIntervalId = window.setInterval("count_down();", 1000);
-                    // $('#token').val(data.token);
-                }
-            },
-            error: function (resp) {
-
-            }
-        });
-    }
-
-    function onApplyCard() {
-        var phone = $('.card_phone').val();
-        var vcode = $(".card_vcode").val();
-        var card_code = $(".card_code").val();
-//	console.log($("#apply_card").serialize());
-//	console.log(phone, vcode);
-        if (!phone || phone.length != 11) {
-            alert('请输入正确的手机号');
-            return false;
-        }
-        if (!vcode || vcode.length != 4) {
-            alert('请输入正确的验证码');
-            return false;
-        }
-        if (!card_code || card_code.length != 4) {
-            alert('请输入正确的手机验证码');
-            return false;
-        }
-        $('#getcode').attr('disabled', 'disabled');
-        $.ajax({
-            type: "GET",
-            url: "/card/apply/"+phone+"/"+card_code+"/0", // TODO, type
-            success: function (resp) {
-                if (resp.length > 0) {
-                    alert(resp);
-                } else {
-                    clearInterval(refreshIntervalId);
-                    // 成功对话框TODO
-                    $('.ui-dialog-content').html($('#apply_success').html());
-                }
-            },
-            error: function () {
-
-            }
-        });
-    }
-
-    var second = 10;
-    function count_down() {
-        if (second > 0) {
-            $('#getcode').attr('disabled', 'disabled');
-            $('#getcode').val(second + '秒');
-            second--;
-        } else {
-            second = 10;
-            $('#getcode').val('获取验证码');
-            $('#getcode').removeAttr('disabled');
-            //       $('.warmprompt').removeClass('hide');
-            clearInterval(refreshIntervalId);
-        }
-    }
-</script>
+<script src="<?= getJs('card.js') ?>"></script>

@@ -30,13 +30,11 @@
         foreach ($pages as $page) {
             if ($page_name == $page[0]) {
                 $on = 'on';
-                $link = '#';
             } else {
                 $on = '';
-                $link = '/' . $page[0];
             }
             echo <<<EOT
-<li><a class="text-center $on" href="$link"><p>$page[1]</p><b>$page[2]</b></a></li>
+<li><a class="text-center $on" href="/$page[0]"><p>$page[1]</p><b>$page[2]</b></a></li>
 EOT;
         }
         ?>

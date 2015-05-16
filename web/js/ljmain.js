@@ -5,7 +5,7 @@
 $(document).ready(function () {
     $('#gallery').showFocusImg();
     $(".nav_box").slideGuide();
-    $('#modal_join').on('show.bs.modal', function () {
+    $('.modal').on('show.bs.modal', function () {
         $(this).css({
             'display': 'block',
             'margin-top': function () {
@@ -13,6 +13,18 @@ $(document).ready(function () {
             }
         });
     });
+    $('#modal_login').on('show.bs.modal', function (event) {
+        // 执行一些动作...
+        var _this = this;
+    })
+
+    $('#modal_join').on('show.bs.modal', function (event) {
+        var source = event.relatedTarget;
+        var subtitle = source.dataset['title'];
+        var title = $(this).find('.modal-title')[0];
+        title.innerHTML = subtitle;
+        $(this).data('type', source.dataset['type']);
+    })
 
     $.datepicker.regional['zh-CN'] = {
         closeText: '关闭',
