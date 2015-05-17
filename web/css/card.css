@@ -22,7 +22,7 @@
 }
 
 .input_group span:after {
-    content: ".";
+    content: "";
     display: inline-block;
     width: 100%;
 }
